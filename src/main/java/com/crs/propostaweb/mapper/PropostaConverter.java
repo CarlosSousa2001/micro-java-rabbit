@@ -18,6 +18,7 @@ public class PropostaConverter implements PropostaRecordMapper{
         Proposta proposta = new Proposta();
 
         proposta.setUsuario(propostaRequestDTOToUsuario(propostaRequestDTO));
+        proposta.setIntegrada(true);
         proposta.setValorSolicitado(propostaRequestDTO.valorSolicitado());
         proposta.setPrazoPagamento(propostaRequestDTO.prazoPagamento());
 

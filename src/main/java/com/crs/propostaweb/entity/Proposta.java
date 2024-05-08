@@ -1,5 +1,6 @@
 package com.crs.propostaweb.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 import java.io.Serial;
@@ -27,6 +28,7 @@ public class Proposta implements Serializable {
     private String observacao;
     @OneToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "id_usuario")
+    @JsonManagedReference
     private Usuario usuario;
 
 
